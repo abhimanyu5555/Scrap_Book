@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+.ui-datepicker {
+   background: #DCDCDC;
+   border: 1px solid #555;
+   color: 696969;
+ }
+.bgcolor{
+	background-color: #C0C0C0;
+}
+.box{
+	height:200px;
+	width:300px;
+	border-width:1px;
+	border-style:double;
+}

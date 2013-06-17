@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ScrapBook</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.html</welcome-file>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>Default.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>Kindaa Controller servlet</description>
+    <display-name>Serv</display-name>
+    <servlet-name>Serv</servlet-name>
+    <servlet-class>user.controller.Serv</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Serv</servlet-name>
+    <url-pattern>/Serv</url-pattern>
+  </servlet-mapping> 
+  
+   <!-- authentication -->
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>ScrapBook</web-resource-name>
+	        <url-pattern>/*</url-pattern>
+	        <http-method>GET</http-method>
+	        <http-method>POST</http-method>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name>user</role-name>
+	    </auth-constraint>
+
+ 	    <user-data-constraint>
+	        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	    </user-data-constraint>
+	
+ 	</security-constraint>
+
+	<login-config>
+	    <auth-method>FORM</auth-method>
+	    <form-login-config>
+	        <form-login-page>/Login.jsp</form-login-page>
+	        <form-error-page>/Login.jsp?Retry=true</form-error-page>
+	    </form-login-config>
+ 	</login-config>
+  
+</web-app>

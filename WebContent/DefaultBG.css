@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+
+.bgcolor{
+	background-color: #C0C0C0;
+}
+.box{
+	height:200px;
+	width:300px;
+	border-width:1px;
+	border-style:double;
+}
