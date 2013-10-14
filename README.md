@@ -19,4 +19,3 @@ Technology:
 - CSS for stylling
 - MySQL for storage
 
-Blog - abhi-singh.co.nr
